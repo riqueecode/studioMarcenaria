@@ -29,5 +29,13 @@
   </head>
   <body>
     <div id="root"></div>
+    <script type="text/javascript">
+      (function (l) {
+        var devEntrypoint = document.querySelector('script[src="/src/main.jsx"]');
+        if (l.hostname === "riqueecode.github.io" && devEntrypoint) {
+          l.replace("/studioMarcenaria/index.prod.html" + l.search + l.hash);
+        }
+      })(window.location);
+    </script>
   </body>
 </html>
